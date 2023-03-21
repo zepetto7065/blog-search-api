@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/search
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+server:
+  servlet:
+    encoding:
+      force: true
+---
+logging.level:
+  org.hibernate.SQL: debug
+  org.springframework: info
+---
+client:
+  kakao:
+    uri: http://dapi.kakao.com
+    key : 4e41e308dee76f0ccbfb117f9bf07a99
+  naver:
+    uri: https://openapi.naver.com
+    client-id: _1fOWlYqQXvTzXodB0jM
+    client-secret: NO1fWhFTmg

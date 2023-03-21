@@ -1,0 +1,12 @@
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test', 20);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test2', 1);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test3', 2);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test4', 3);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test5', 56);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test6', 120);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test7', 22);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test8', 23);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test9', 45);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test10', 67);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test11', 99);
+INSERT INTO KEYWORD (word, search_cnt) VALUES ('test12', 2929);

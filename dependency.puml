@@ -1,0 +1,31 @@
+@startuml
+
+package core {
+  component application as d
+}
+
+package adapter {
+  component web_api as wapi
+  component persistence as ap
+  component client_naver as acn
+  component client_kakao as ack
+
+}
+
+package bootstrap {
+  component web_application as wa
+}
+
+wa --> wapi
+
+wa --> d
+wa --> ap
+wa --> acn
+wa --> ack
+
+wapi --> d
+ap --> d
+acn --> d
+ack --> d
+
+@enduml

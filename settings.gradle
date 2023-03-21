@@ -1,0 +1,10 @@
+rootProject.name = 'blog-search-api'
+
+include 'bootstrap:web-application'
+include 'core:application'
+include 'adapter:web-api'
+include 'adapter:persistence'
+include 'adapter:client-kakao'
+include 'adapter:client-kako'
+include 'adapter:client-naver'
+

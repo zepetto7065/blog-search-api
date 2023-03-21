@@ -1,0 +1,6 @@
+
+
+bootJar {
+    jar.enabled = true
+    mainClass = 'com.me.search.BlogSearchApiApplication'
+}
