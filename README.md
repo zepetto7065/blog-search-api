@@ -20,3 +20,5 @@ java -jar web-application/build/libs/web-application-1.0.0-SNAPSHOT.jar
 - core
     - application : 핵심 비지니스 로직
 
+### download link
+- https://github.com/zepetto7065/blog-search-api/raw/main/web-application-1.0.0-SNAPSHOT.jar
