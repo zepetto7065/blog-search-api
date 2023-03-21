@@ -22,3 +22,8 @@ java -jar web-application/build/libs/web-application-1.0.0-SNAPSHOT.jar
 
 ### download link
 - https://github.com/zepetto7065/blog-search-api/raw/main/web-application-1.0.0-SNAPSHOT.jar
+
+### library
+- lombok - Java 소스내 반복되는 라이브러리 어노테이션으로 간소화
+- mapstruct - 분리된 모듈간 VO 객체 Mapping 간소화
+- zalando - application/problem+json 오류 응답 형식 사용하기 위함 
