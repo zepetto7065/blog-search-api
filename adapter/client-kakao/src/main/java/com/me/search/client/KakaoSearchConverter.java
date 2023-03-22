@@ -8,7 +8,8 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface KakaoSearchConverter {
-    KakaoSearchConverter INSTANCE = Mappers.getMapper(KakaoSearchConverter.class);
 
-    List<KakaoBlogSearchResult> map(List<Document> responseList);
+  KakaoSearchConverter INSTANCE = Mappers.getMapper(KakaoSearchConverter.class);
+
+  List<KakaoBlogSearchResult> map(List<Document> responseList);
 }

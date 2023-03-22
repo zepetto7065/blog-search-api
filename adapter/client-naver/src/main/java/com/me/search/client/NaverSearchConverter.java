@@ -8,7 +8,8 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface NaverSearchConverter {
-    NaverSearchConverter INSTANCE = Mappers.getMapper(NaverSearchConverter.class);
 
-    List<NaverBlogSearchResult> map(List<Item> responseList);
+  NaverSearchConverter INSTANCE = Mappers.getMapper(NaverSearchConverter.class);
+
+  List<NaverBlogSearchResult> map(List<Item> responseList);
 }

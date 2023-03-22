@@ -8,6 +8,7 @@ import org.zalando.problem.violations.ConstraintViolationProblemModule;
 
 @Configuration
 public class ProblemWebConfig {
+
   @Bean
   public ObjectMapper objectMapper() {
     return new ObjectMapper().registerModules(new ProblemModule().withStackTraces(),

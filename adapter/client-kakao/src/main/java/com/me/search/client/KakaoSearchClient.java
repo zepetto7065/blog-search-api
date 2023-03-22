@@ -1,10 +1,13 @@
 package com.me.search.client;
 
 import com.me.search.client.payload.KakaoClientResponse;
-import com.me.search.exception.KakaoSearchClientException;
 import com.me.search.dto.BlogSearchCommand;
 import com.me.search.dto.KakaoBlogSearchResult;
+import com.me.search.exception.KakaoSearchClientException;
 import com.me.search.port.out.SearchKakaoClientAdapter;
+import java.net.URI;
+import java.util.List;
+import java.util.Objects;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.RequestEntity;
@@ -12,12 +15,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
-import java.util.List;
-import java.util.Objects;
-
 @Component
 class KakaoSearchClient implements SearchKakaoClientAdapter {
+
   private final RestTemplate restTemplate;
   private final String INVALID_RESPONSE = "Invalid Response";
 
@@ -51,7 +51,7 @@ class KakaoSearchClient implements SearchKakaoClientAdapter {
           .getBody();
       return KakaoSearchConverter.INSTANCE.map(response.getDocuments());
     } catch (Exception e) {
-      throw new KakaoSearchClientException();
+      throw new KakaoSearchClientException(e.getMessage());
     }
   }
 }

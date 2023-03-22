@@ -55,7 +55,7 @@ project("adapter:client-kakao") {
     }
 }
 
-project("adapter:client-naver"){
+project("adapter:client-naver") {
     dependencies {
         implementation project(':core:application')
         implementation("org.springframework.boot:spring-boot-starter-web")

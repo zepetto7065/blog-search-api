@@ -15,16 +15,12 @@ import org.zalando.problem.spring.web.advice.ProblemHandling;
 @Slf4j
 @ControllerAdvice
 public class ControllerAdvisor implements ProblemHandling {
-    @ExceptionHandler
-    public ResponseEntity<Problem> kakaoSearchClientExceptionHandler(final KakaoSearchClientException exception,
-        final NativeWebRequest request){
-        return create(Status.INTERNAL_SERVER_ERROR, exception, request);
-    }
 
-    @ExceptionHandler
-    public ResponseEntity<Problem> naverSearchClientExceptionHandler(final NaverSearchClientException exception,
+    @ExceptionHandler(value = {KakaoSearchClientException.class, NaverSearchClientException.class})
+    public ResponseEntity<Problem> searchClientExceptionHandler(final Exception exception,
         final NativeWebRequest request){
-        return create(Status.INTERNAL_SERVER_ERROR, exception, request);
+        log.error(exception.getMessage());
+        return create(Status.SERVICE_UNAVAILABLE, exception, request);
     }
 
     @Override

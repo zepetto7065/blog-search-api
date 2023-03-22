@@ -8,6 +8,7 @@ import com.me.search.port.out.SearchNaverClientAdapter;
 import java.net.URI;
 import java.util.List;
 import java.util.Objects;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.RequestEntity;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
+@Slf4j
 @Component
 class NaverSearchClient implements SearchNaverClientAdapter {
 

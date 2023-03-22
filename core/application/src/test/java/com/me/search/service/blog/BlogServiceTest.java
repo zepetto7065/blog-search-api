@@ -83,7 +83,7 @@ class BlogServiceTest {
         .build();
 
     given(findKeywordRepositoryAdapter.findKeywordByWord(command.getQuery())).willReturn(Optional.empty());
-    given(searchKakaoClientAdapter.searchBlog(command)).willThrow(new KakaoSearchClientException());
+    given(searchKakaoClientAdapter.searchBlog(command)).willThrow(new KakaoSearchClientException("일시적 카카오 서버 장애"));
     given(searchNaverClientAdapter.searchBlog(naverCommand)).willReturn(new ArrayList<>(
         Arrays.asList(
             NaverBlogSearchResult.builder().title("naverTest").description("test입니다.").build(),

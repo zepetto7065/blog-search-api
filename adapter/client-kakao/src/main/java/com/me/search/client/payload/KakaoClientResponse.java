@@ -16,31 +16,33 @@ import java.util.List;
 @Jacksonized
 public class KakaoClientResponse {
 
-    Meta meta;
-    List<Document> documents;
+  Meta meta;
+  List<Document> documents;
 
-    @Value
-    @Getter
-    @Builder
-    @Jacksonized
-    @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-    public static class Meta{
-        Integer totalCount;
-        Integer pageableCount;
-        Boolean isEnd;
-    }
+  @Value
+  @Getter
+  @Builder
+  @Jacksonized
+  @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
+  public static class Meta {
 
-    @Value
-    @Getter
-    @Builder
-    @Jacksonized
-    public static class Document {
-        String title;
-        String contents;
-        String url;
-        @JsonProperty("blogname")
-        String blogName;
-        String thumbnail;
-        String datetime;
-    }
+    Integer totalCount;
+    Integer pageableCount;
+    Boolean isEnd;
+  }
+
+  @Value
+  @Getter
+  @Builder
+  @Jacksonized
+  public static class Document {
+
+    String title;
+    String contents;
+    String url;
+    @JsonProperty("blogname")
+    String blogName;
+    String thumbnail;
+    String datetime;
+  }
 }
